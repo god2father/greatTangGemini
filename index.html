@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="唐诗时光长河 — 一条金色沙砾长河贯穿时空，探寻唐代诗人的璀璨足迹">
+  <title>唐诗时光长河</title>
+
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css?v=8">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./lib/three/build/three.module.js",
+      "three/addons/": "./lib/three/addons/"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- 加载过渡 -->
+  <div id="loading-screen">
+    <div id="loading-content">
+      <h1 class="loading-title">时光长河</h1>
+      <p class="loading-subtitle">大唐诗韵 · 千年回响</p>
+      <div class="loading-bar"><div class="loading-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- 3D 画布容器 -->
+  <div id="container">
+    <canvas id="canvas"></canvas>
+  </div>
+
+  <!-- 标签层 -->
+  <div id="labels-container"></div>
+
+  <!-- 场景标题 -->
+  <div id="title-overlay">
+    <h1>唐诗时光长河</h1>
+    <div class="era-range">公元 618 — 907</div>
+  </div>
+
+  <!-- 中央诗人面板 -->
+  <div id="panel-overlay">
+    <div id="poet-panel">
+      <button id="panel-close" aria-label="关闭">✕</button>
+      <div class="panel-header">
+        <h2 id="poet-name"></h2>
+        <span id="poet-courtesy"></span>
+        <div id="poet-years"></div>
+        <div id="poet-era"></div>
+      </div>
+      <div class="panel-divider"></div>
+      <div class="panel-body">
+        <p id="poet-bio"></p>
+      </div>
+      <div class="panel-divider"></div>
+      <div class="panel-works">
+        <h3>代表作</h3>
+        <div id="works-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 右侧诗文展示 -->
+  <div id="poem-display">
+    <button id="poem-close" aria-label="关闭">✕</button>
+    <div id="poem-header">
+      <div id="poem-title"></div>
+      <div id="poem-author"></div>
+    </div>
+    <div id="poem-body"></div>
+  </div>
+
+  <!-- 操作提示 -->
+  <div id="hint">
+    <span>🖱️ 拖动旋转 · 滚轮缩放 · 点击光点探索诗人</span>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
